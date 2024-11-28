@@ -1,11 +1,9 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
+import { StockSearchItemModel } from "../../models/StockSearchItem";
 
 interface StockItemProps {
-  stock: {
-    ticker: string;
-    fullName: string;
-  };
+  stock: StockSearchItemModel,
   onClick?: () => void; // Optional click handler for navigation or other actions
 }
 
@@ -17,7 +15,7 @@ const StockItem: React.FC<StockItemProps> = ({ stock, onClick }) => {
     >
       <CardContent>
         <Typography variant="h6">{stock.ticker}</Typography>
-        <Typography color="textSecondary">{stock.fullName}</Typography>
+        <Typography color="textSecondary">{stock.name}</Typography>
       </CardContent>
     </Card>
   );
