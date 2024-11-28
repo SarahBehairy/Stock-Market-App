@@ -10,12 +10,38 @@ interface StockItemProps {
 const StockItem: React.FC<StockItemProps> = ({ stock, onClick }) => {
   return (
     <Card
-      style={{ margin: "10px 0", cursor: onClick ? "pointer" : "default" }}
+    
+      sx={{
+        margin: "10px 0",
+        cursor: onClick ? "pointer" : "default",
+        padding: "16px",
+        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+        transition: "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out",
+        alignSelf: 'stretch',
+        flex:1,
+        "&:hover": {
+          transform: "translateY(-2px)",
+          boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
+        }
+      }}
       onClick={onClick}
     >
       <CardContent>
-        <Typography variant="h6">{stock.ticker}</Typography>
-        <Typography color="textSecondary">{stock.name}</Typography>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1976d2" }}>
+          {stock.ticker}
+        </Typography>
+        <Typography sx={{ fontSize: "0.9rem", color: "#666", marginBottom: "8px" }}>
+          {stock.name}
+        </Typography>
+        <Typography sx={{ fontSize: "0.85rem", color: "#444" }}>
+          Market: {stock.market || "N/A"}
+        </Typography>
+        <Typography sx={{ fontSize: "0.85rem", color: "#444" }}>
+          Type: {stock.type || "N/A"}
+        </Typography>
+        <Typography sx={{ fontSize: "0.85rem", color: "#444" }}>
+          Currency: {stock.currency_name || "N/A"}
+        </Typography>
       </CardContent>
     </Card>
   );

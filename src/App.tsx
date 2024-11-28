@@ -1,19 +1,24 @@
-
-import './App.css'
-import SearchBar from './components/SearchBar/SearchBar'
-import StockList from './components/StockList/StockList'
-
 import { QueryClient, QueryClientProvider } from "react-query";
+import Homepage from './pages/Homepage';
+import './App.css';
+import { useAppStore } from "./store/AppStore";
+import { darkTheme } from "./styles/theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { lightTheme } from "./styles/theme";
 
 const queryClient = new QueryClient();
 
 function App() {
-
+  const darkMode = useAppStore((state) => state.darkMode);
+  const toggleDarkMode = useAppStore((state) => state.toggleDarkMode);
+  
   return (
     <QueryClientProvider client={queryClient}>
-    <SearchBar/>
-        <StockList/>
-        </QueryClientProvider>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <CssBaseline />
+      <Homepage/>
+    </ThemeProvider>
+  </QueryClientProvider>
   )
 }
 
