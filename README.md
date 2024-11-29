@@ -3,6 +3,7 @@
 The Stock Market App is a web application built with React and TypeScript that provides a clean and responsive interface for exploring stocks listed on the NASDAQ exchange. Users can search for stocks and load more data using infinite scrolling.
 
 🚀 Features
+
 View NASDAQ Stocks: Display a list of stocks with their ticker symbols and full names.
 Infinite Scrolling: Load more stocks dynamically as you scroll.
 Search Functionality: Search for stocks in real-time while typing.
@@ -14,6 +15,7 @@ Light and Dark modes
 
 
 🛠️ Tech Stack
+
 Frontend: React, TypeScript
 HTTP Client: Axios
 Styling: Material-UI, CSS
@@ -22,39 +24,24 @@ Build Tool: Vite
 
 
 📦 Installation
+
 Clone the Repository:
+
 git clone https://github.com/your-username/stock-market-app.git
 cd stock-market-app
 
 Install Dependencies:
+
 npm install
 
 Start the Development Server:
+
 npm run dev
 
 
 Access the App: Open  http://localhost:5173/ in your browser.
 
-🖼️ Screenshots
-Splash Screen
 
-Stock List
-
-Search Stocks
-
-📚 Usage
-Splash Screen:
-
-The app displays a splash screen with a logo and name for 3 seconds before navigating to the homepage.
-Browse Stocks:
-
-Scroll down the page to load more stocks dynamically.
-Search Stocks:
-
-Type in the search bar to find specific stocks by ticker or name. Results update as you type.
-Error Handling:
-
-If the API request exceeds the rate limit, the app retries with exponential backoff.
 📋 File Structure
 
 src/
