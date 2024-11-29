@@ -26,31 +26,32 @@ const SearchBar: React.FC = () => {
   return (
     <TextField    
       fullWidth
-      placeholder="Search stocks..."
+      placeholder="search"
       variant="outlined"
       onChange={handleInputChange}
       value={searchInput}
       InputProps={{
         endAdornment: searchInput && (
           <IconButton
-            onClick={handleClearSearch}
+            aria-label="clear-search-btn"
             edge="end"
             sx={{ visibility: searchInput ? 'visible' : 'hidden' }}
+            onClick={handleClearSearch}
           >
-            <CloseIcon />
+            <CloseIcon  />
           </IconButton>
         ),
       }}
       sx={{
-        margin: '20px 0',
+        input: { color: 'inherit' },
         '& .MuiOutlinedInput-root': {
-          backgroundColor: '#ffffff', 
+          backgroundColor: (theme) => theme.palette.background.paper,
           borderRadius: '8px',
           '&:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#1976d2',
+            borderColor: (theme) => theme.palette.primary.main,
           },
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#1976d2',
+            borderColor: (theme) => theme.palette.primary.main,
             borderWidth: '2px',
           }
         },
@@ -58,12 +59,11 @@ const SearchBar: React.FC = () => {
           padding: '14px',
           fontSize: '1rem',
           '&::placeholder': {
-            color: '#666',
+            color: (theme) => theme.palette.text.secondary,
             opacity: 0.8,
           }
         },
-        width: { xs: '100%', md: '50%' }
-      }}
+        width: { xs: '100%', md: '50%' }      }}
     />
   );
 };
