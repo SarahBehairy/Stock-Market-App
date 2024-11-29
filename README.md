@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+📈 Stock Market App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Stock Market App is a web application built with React and TypeScript that provides a clean and responsive interface for exploring stocks listed on the NASDAQ exchange. Users can search for stocks and load more data using infinite scrolling.
 
-Currently, two official plugins are available:
+-------------------------------------------------------------------------------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
 
-## Expanding the ESLint configuration
+View NASDAQ Stocks: Display a list of stocks with their ticker symbols and full names.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Infinite Scrolling: Load more stocks dynamically as you scroll.
 
-- Configure the top-level `parserOptions` property like this:
+Search Functionality: Search for stocks in real-time while typing.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Splash Screen: Displays a custom splash screen with a logo and app name.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Responsive Design: Optimized for both desktop and mobile devices.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Caching: Reduces redundant API requests using local caching.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Error Handling: Gracefully handles server errors and rate-limiting issues.
+
+Light and Dark modes
+
+-------------------------------------------------------------------------------------
+
+🛠️ Tech Stack
+
+Frontend: React, TypeScript
+HTTP Client: Axios
+Styling: Material-UI, CSS
+State Management: Zustand
+Build Tool: Vite
+
+-------------------------------------------------------------------------------------
+
+📦 Installation
+
+1- Clone the Repository:
+
+git clone https://github.com/SarahBehairy/stock-market-app.git
+cd stock-market-app
+
+2- Install Dependencies:
+
+npm install
+
+3- Start the Development Server:
+
+npm run dev
+
+
+Access the App: Open  http://localhost:5173/ in your browser.
+
+-------------------------------------------------------------------------------------
+
+💬 Contact
+
+  Author: Sarah Hanafy Behairy
+  Email: sarahhanafy20@gmail.com
+  Feel free to reach out for any questions or feedback! 😊
