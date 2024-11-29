@@ -59,7 +59,7 @@ const SearchBar: React.FC = () => {
           padding: '14px',
           fontSize: '1rem',
           '&::placeholder': {
-            color: (theme) => theme.palette.text.secondary,
+            color: (theme) => theme.palette.text.primary,
             opacity: 0.8,
           }
         },
