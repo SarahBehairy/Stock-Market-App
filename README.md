@@ -38,7 +38,7 @@ Build Tool: Vite
 
 1- Clone the Repository:
 
-git clone https://github.com/your-username/stock-market-app.git
+git clone https://github.com/SarahBehairy/stock-market-app.git
 cd stock-market-app
 
 2- Install Dependencies:
