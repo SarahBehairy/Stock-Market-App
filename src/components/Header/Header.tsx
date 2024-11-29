@@ -4,6 +4,9 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { useAppStore } from "../../store/AppStore";
 import SearchBar from "../SearchBar/SearchBar";
+import nasdaqLogoLight from "@assets/images/nasdaq-logo-light.svg";
+import nasdaqLogoDark from "@assets/images/nasdaq-logo-dark.png";
+
 
 const Header: React.FC = () => {
   const toggleDarkMode = useAppStore((state) => state.toggleDarkMode);
@@ -44,7 +47,7 @@ const Header: React.FC = () => {
                 color: 'primary.main'
               }}
             >
-              <img src={isDarkMode ? 'src/assets/images/nasdaq-logo-dark.png' : 'src/assets/images/nasdaq-logo-light.svg'} alt="Nasdaq Logo" width="100"/>
+              <img src={isDarkMode ? nasdaqLogoDark : nasdaqLogoLight} alt="Nasdaq Logo" width="100"/>
             </Box>
 
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>

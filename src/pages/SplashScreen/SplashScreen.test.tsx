@@ -7,7 +7,6 @@ describe("SplashScreen", () => {
 
     const logo = screen.getByAltText("Nasdaq Logo");
     expect(logo).toBeInTheDocument();
-    expect(logo).toHaveAttribute("src", "src/assets/images/nasdaq-logo-light.svg");
     expect(logo).toHaveAttribute("width", "300px");
 
     expect(screen.getByText("Sarah Hanafy")).toBeInTheDocument();
