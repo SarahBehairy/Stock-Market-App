@@ -2,6 +2,8 @@
 
 The Stock Market App is a web application built with React and TypeScript that provides a clean and responsive interface for exploring stocks listed on the NASDAQ exchange. Users can search for stocks and load more data using infinite scrolling.
 
+-------------------------------------------------------------------------------------
+
 🚀 Features
 
 View NASDAQ Stocks: Display a list of stocks with their ticker symbols and full names.
@@ -20,6 +22,7 @@ Error Handling: Gracefully handles server errors and rate-limiting issues.
 
 Light and Dark modes
 
+-------------------------------------------------------------------------------------
 
 🛠️ Tech Stack
 
@@ -29,6 +32,7 @@ Styling: Material-UI, CSS
 State Management: Zustand
 Build Tool: Vite
 
+-------------------------------------------------------------------------------------
 
 📦 Installation
 
@@ -48,6 +52,7 @@ npm run dev
 
 Access the App: Open  http://localhost:5173/ in your browser.
 
+-------------------------------------------------------------------------------------
 
 💬 Contact
 
