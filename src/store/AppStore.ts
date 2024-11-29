@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-interface AppState {
+export interface AppState {
     search: string;
     darkMode: boolean;
     setSearch: (value: string) => void;
