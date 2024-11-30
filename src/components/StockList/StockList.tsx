@@ -39,8 +39,7 @@ const StockList: React.FC = () => {
       </div>
     );
   }
-
-  if(isFetching) return (
+  if(!data && isFetching) return (
     <div style={{
       display: 'flex',
       justifyContent: 'center',
@@ -50,8 +49,7 @@ const StockList: React.FC = () => {
       <LoadingSpinner />
     </div>
   )
-  else if(!data || !data.pages?.[0].results?.length) return <EmptyState/>
-
+   else if(!data || !data.pages?.[0].results?.length) return <EmptyState/>
 
   return (
     <InfiniteScroll
@@ -76,6 +74,12 @@ const StockList: React.FC = () => {
           ))}
         </React.Fragment>
       ))}
+      {isFetching && <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'    }}>
+      <LoadingSpinner />
+    </div>}
     </InfiniteScroll>
   );
 };
